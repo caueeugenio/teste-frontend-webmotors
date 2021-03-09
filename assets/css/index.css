@@ -1,0 +1,127 @@
+:root {
+    --vermelho-padrao: rgb(221, 51, 51);
+    --laranja-padrao: rgb(194, 103, 0);
+    --cor-fundo: rgb(202, 197, 197);
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.logo-webmotors {
+    padding: 1em;
+}
+
+.container {
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.conteudo {
+    background-color: whitesmoke;
+    margin: 1em;
+}
+
+.cabecalho-nivel-1 {
+    margin-bottom: 1em;
+}
+
+.inputStyle {
+    float: right;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    padding: 0.5em;
+    width: 100px;
+}
+
+.box {
+    text-align: center;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+.menu-opcoes i {
+    text-align: center;
+    padding: 1em;
+}
+
+.menu-opcoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-comprar {
+    cursor: pointer;
+    width: 150px;
+    padding: 0.5em;
+}
+
+.btn-comprar strong {
+    color: var(--vermelho-padrao);
+}
+
+.btn-comprar:hover {
+    border-bottom: 2px solid var(--vermelho-padrao);
+}
+
+.btn-vender {
+    cursor: pointer;
+    color: var(--laranja-padrao);
+    text-align: center;
+    padding: 0.3em;
+    border: 2px solid var(--laranja-padrao);
+}
+
+.btn-busca, .btn-limpa-filtro, .btn-ofertas {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-busca {
+    color: var(--vermelho-padrao);
+}
+
+.btn-limpa-filtro {
+    color: rgb(131, 130, 130);
+}
+
+.btn-ofertas {
+    color: whitesmoke;
+}
+
+.box-ofertas {
+    background-color: var(--vermelho-padrao);
+}
+@media only screen and (min-width: 600px) {
+    .logo-webmotors {
+        width: 250px;
+    }
+    /* .container {
+        width: 933px;
+    } */
+    .conteudo {
+        margin: 0;
+    }
+    .menu-opcoes {
+        display: flex;
+        flex-direction: row;
+    }
+    .box {
+        text-align: left;
+        flex-wrap: wrap;
+        width: 97.3%;
+    }
+    .inputStyle {
+        padding: 0.2em;
+        float: none;
+        width: 97.3%;
+    }
+    .btn-style {
+        text-align: center;
+    }
+}

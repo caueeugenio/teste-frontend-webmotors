@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <title>WebMotors</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="cabecalho">
+            <div class="cabecalho-nivel-1">
+                <img class="logo-webmotors" src="assets/img/logos/webmotors.svg" alt="logo webmotors" srcset="">
+            </div>
+
+            <div class="menu-opcoes">
+                <i class="fas fa-car"><a class="btn-comprar">COMPRAR <strong>CARROS</strong></a></i>
+                <i class="fas fa-motorcycle"><a class="btn-comprar">COMPRAR <strong>MOTOS</strong></a></i>
+                <a class="btn-vender">Vender meu carro</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="conteudo">
+
+                <form action='/' method='post'>
+
+                    <div class="box">
+                        <input value="Novo" type="checkbox" name="cbTipo" id="cbNovos">Novos
+                        <input value="Usado" type="checkbox" name="cbTipo" id="cbUsados">Usados
+                    </div>
+
+                    <div class="box">
+                        <span class="">Onde</span>
+                        <select class="inputStyle" name="regiao" id="regiao">
+                            <option value="">São Paulo</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <span class="">Raio</span>
+                        <select class="inputStyle" name="raio" id="raio">
+                            <option value="Todos">Todos</option>
+                            <option value=0>0km</option>
+                            <option value=47500>47500km</option>
+                            <option value=12000>12000km</option>
+                            <option value=12900>12900km</option>
+                            <option value=93000>93000km</option>
+                        </select>
+
+                    </div>
+                    <div class="box">
+                        <span class="">Marca</span>
+                        <select class="inputStyle" name="marca" id="marca">
+                            <option value="Todos">Todas</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <span class="">Modelo</span>
+                        <select class="inputStyle" name="modelo" id="modelo">
+                            <option value="Todos">Todos</option>
+                            <option value="Astra">Astra</option>
+                            <option value="Agile">Agile</option>
+                            <option value="City">City</option>
+                            <option value="CRV">CRV</option>
+                            <option value="Ecosport">Ecosport</option>
+                            <option value="Fussion">Fussion</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <span class="">Ano Desejado</span>
+                        <select class="inputStyle" name="ano" id="ano">
+                            <option value="Todos">Todos</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <span class="">Faixa de preço</span>
+                        <select class="inputStyle" name="faixa-preco" id="faixa-preco">
+                            <option value="0,00">0,00</option>
+                            <option value="37000,00">37.000,00</option>
+                            <option value="45000,00">45.000,00</option>
+                            <option value="49000,00">49.000,00</option>
+                            <option value="55000,00">55.000,00</option>
+                            <option value="59000,00">59.000,00</option>
+                            <option value="78000,00">78.000,00</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <span class="">Versão</span>
+                        <select class="inputStyle" name="versao" id="versao">
+                            <option value="Todos">Todas</option>
+                            <option value="2.0 EXL 4X4 16V GASOLINA 4P AUTOMÁTICO">2.0 EXL 4X4 16V GASOLINA 4P
+                                AUTOMÁTICO</option>
+                            <option value="2.0 EVO 4P AUTOMÁTICO">2.0 EVO 4P AUTOMÁTICO</option>
+                            <option value="1.4 LXL 16V FLEX 4P AUTOMÁTICO">1.4 LXL 16V FLEX 4P AUTOMÁTICO</option>
+                            <option value="2.0 EVO 4P AUTOMÁTICO">2.0 EVO 4P AUTOMÁTICO</option>
+                            <option value="1.4 MPFI EFFECT 8V FLEX 4P AUTOMATIZADO">1.4 MPFI EFFECT 8V FLEX 4P
+                                AUTOMATIZADO</option>
+                            <option value="1.6 FREESTYLE 16V FLEX 4P MANUAL">1.6 FREESTYLE 16V FLEX 4P MANUAL</option>
+                        </select>
+                    </div>
+                </form>
+
+                <div class="box btn-style">
+                    <a onchange="filtraVeiculos();" id="myBtn" class="btn-busca">Busca avançada</a>
+                </div>
+
+                <div class="box btn-style">
+                    <a onclick="limpaFiltro();" class="btn-limpa-filtro">Limpa filtros</a>
+                </div>
+
+                <div class="box box-ofertas btn-style">
+                    <a class="btn-ofertas">VER OFERTAS</a>
+                </div>
+            </div>
+
+
+
+        </main>
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- <p>Some text in the Modal..</p> -->
+        </div>
+
+    </div>
+    <script src="assets/js/getVehicles.js"></script>
+    <script src="assets/js/modal.js"></script>
+</body>
+
+</html>
