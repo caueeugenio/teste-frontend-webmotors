@@ -1,6 +1,6 @@
 :root {
     --vermelho-padrao: rgb(221, 51, 51);
-    --laranja-padrao: rgb(194, 103, 0);
+    --laranja-padrao: rgb(230, 125, 6);
     --cor-fundo: rgb(202, 197, 197);
 }
 
@@ -71,9 +71,10 @@
 
 .btn-vender {
     cursor: pointer;
+    font-weight: bold;
     color: var(--laranja-padrao);
     text-align: center;
-    padding: 0.3em;
+    padding: 0.3em ;
     border: 2px solid var(--laranja-padrao);
 }
 
